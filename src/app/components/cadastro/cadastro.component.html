@@ -18,7 +18,8 @@
                 type="text" 
                 class="form-control" 
                 id="telefone" 
-                placeholder="(99) 9 9999-9999" 
+                placeholder="(99) 9 9999-9999"
+                mask="(00) 0 0000-0000"
                 name="telefone"
                 formControlName="telefone">
         </div>
@@ -41,7 +42,8 @@
                 type="text" 
                 class="form-control" 
                 id="cpf" 
-                placeholder="999.999.999-99" 
+                placeholder="999.999.999-99"
+                mask="000.000.000-00" 
                 name="cpf"
                 formControlName="cpf">
         </div>
@@ -88,5 +90,5 @@
 
 <div class="entrar mb-5">
     <p>Já possui uma conta?</p>
-    <button class="btn btn-primary">Entrar</button>
+    <button class="btn btn-primary" routerLink="/login">Entrar</button>
 </div>

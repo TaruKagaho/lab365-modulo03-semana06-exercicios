@@ -13,9 +13,9 @@ export class CadastroComponent {
   constructor() {
     this.cadastroForm = new FormGroup({
       nome: new FormControl('', [Validators.required]),
-      telefone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{16}$')]),
+      telefone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{11}$')]),
       dataNascimento: new FormControl('', [Validators.required]),
-      cpf: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{14}$')]),
+      cpf: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{11}$')]),
       email: new FormControl('', [Validators.required, Validators.email]),
       senha: new FormControl('', [Validators.required, Validators.minLength(8)]),
       confirmacaoSenha: new FormControl('', [Validators.required, Validators.minLength(8)]),
