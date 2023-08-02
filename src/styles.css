@@ -12,3 +12,12 @@
     background-color: white;
     border-radius: 30;
 }
+
+.active{
+    color: #7749F8 !important;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #7749F8 !important;
+    border-color: #7749F8 !important;
+}
