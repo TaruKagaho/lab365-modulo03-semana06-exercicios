@@ -26,6 +26,7 @@ export class AuthService {
   }
 
   obterNomePedagogoLogado() {
-    return this.pedagogoLogado?.nome;
+    const nomeCompleto = this.pedagogoLogado?.nome; 
+    return nomeCompleto?.substring(0, nomeCompleto?.indexOf(' ')); ;
   }
 }

@@ -1,0 +1,10 @@
+.logo {
+    position: absolute;
+    align-items: center;
+    display: flex;
+}
+
+.final {
+    position: absolute; 
+    right: 0;
+}
