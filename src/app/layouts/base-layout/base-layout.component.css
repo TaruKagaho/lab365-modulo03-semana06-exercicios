@@ -1,0 +1,12 @@
+.bg-roxo-com-header {
+    min-height: calc(100vh - 56px);
+}
+
+.bg-base {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
