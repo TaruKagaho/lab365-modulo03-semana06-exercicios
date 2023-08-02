@@ -1,3 +1,13 @@
 {
-    "pedagogos": []
+  "pedagogos": [
+    {
+      "nome": "Alvaro Jose",
+      "telefone": "41912345678",
+      "dataNascimento": "1999-05-22T00:00:00.000Z",
+      "cpf": "12345678910",
+      "email": "alvaro@email.com",
+      "senha": "12345678",
+      "id": 1
+    }
+  ]
 }
