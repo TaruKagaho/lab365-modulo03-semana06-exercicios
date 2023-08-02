@@ -18,5 +18,9 @@ export class AlunosComponent implements OnInit {
     console.log(this.alunos);
   }
 
-
+  onInputChange() {
+    const input = document.getElementById("filtroAluno") as HTMLInputElement;
+    if (this.alunos === undefined) return;
+    this.alunos = this.alunoService.filtrarAlunos(input.value);
+  }
 }
