@@ -17,4 +17,8 @@ export class PedagogoService {
       throw new Error("Erro ao cadastrar pedagogo");
     }
   }
+
+  obterPedagogos() {
+    return lastValueFrom(this.httpClient.get<IPedagogo[]>('http://localhost:3000/pedagogos'));
+  }
 }
