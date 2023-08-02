@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { PedagogoService } from './pedagogo.service';
+import { IPedagogo } from '../interfaces/IPedagogo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+  private pedagogoLogado: IPedagogo | undefined;
 
   constructor(private pedagogoService: PedagogoService) { }
 
@@ -13,10 +16,17 @@ export class AuthService {
     for (const pedagogo of pedagogos) {
       const emailCorreto = email === pedagogo.email;
       const senhaCorreta = senha === pedagogo.senha;
-      if (emailCorreto && senhaCorreta)
+      if (emailCorreto && senhaCorreta) {
+        this.pedagogoLogado = pedagogo;
         return;
+      }
     }
 
     throw new Error("Credenciais inválidas!");
+  }
+
+  obterNomePedagogoLogado() {
+    const nomeCompleto = this.pedagogoLogado?.nome; 
+    return nomeCompleto?.substring(0, nomeCompleto?.indexOf(' ')); ;
   }
 }

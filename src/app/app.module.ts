@@ -9,13 +9,19 @@ import { HttpClientModule } from '@angular/common/http'
 import { AutenticacaoLayoutComponent } from './layouts/autenticacao-layout/autenticacao-layout.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { AlunosComponent } from './components/alunos/alunos.component';
+import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AutenticacaoLayoutComponent,
-    CadastroComponent
+    CadastroComponent,
+    HeaderComponent,
+    AlunosComponent,
+    BaseLayoutComponent
   ],
   imports: [
     BrowserModule,
