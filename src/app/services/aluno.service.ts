@@ -35,4 +35,8 @@ export class AlunoService {
       await this.obterAlunos();
     return this.alunos.length;
   }
+
+  async cadastrarAluno(aluno: IAluno) {
+    return lastValueFrom(this.httpClient.post("http://localhost:3000/alunos", aluno));
+  }
 }

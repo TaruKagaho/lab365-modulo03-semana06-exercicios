@@ -16,6 +16,7 @@ import { NaoAutorizadoComponent } from './components/nao-autorizado/nao-autoriza
 import { NaoEncontradoComponent } from './components/nao-encontrado/nao-encontrado.component';
 import { AcompanhamentosComponent } from './components/acompanhamentos/acompanhamentos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { AlunosCadastroComponent } from './components/alunos-cadastro/alunos-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     NaoAutorizadoComponent,
     NaoEncontradoComponent,
     AcompanhamentosComponent,
-    InicioComponent
+    InicioComponent,
+    AlunosCadastroComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 export interface IAluno {
     nome: string,
     telefone: string,
-    dataNascimento: Date,
+    dataNascimento: string,
     cpf: string,
     nota: number
 }

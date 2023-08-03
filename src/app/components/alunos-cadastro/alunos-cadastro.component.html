@@ -1,0 +1,49 @@
+<h3><strong>Cadastrar aluno</strong></h3>
+
+
+<form class="w-50" [formGroup]="alunoForm" (ngSubmit)="onSubmit()">
+    <label for="nome">Nome</label>
+    <input 
+        type="text" 
+        class="form-control mb-3" 
+        id="nome" 
+        placeholder="Insira o nome do aluno" 
+        name="nome" 
+        formControlName="nome">
+    <label for="telefone">Telefone</label>
+    <input 
+        type="text" 
+        class="form-control mb-3" 
+        id="telefone" 
+        placeholder="(99) 9 9999-9999" 
+        name="telefone" 
+        formControlName="telefone" 
+        mask="(00) 0 0000-0000">
+    <label for="data">Data de nascimento</label>
+    <input 
+        type="date" 
+        class="form-control mb-3" 
+        id="date" 
+        placeholder="dd/mm/aaaa"
+        name="data" 
+        formControlName="data">
+    <label for="cpf">CPF</label>
+    <input 
+        type="text" 
+        class="form-control mb-3" 
+        id="cpf" 
+        placeholder="999.999.999-99"
+        name="cpf" 
+        formControlName="cpf"
+        mask="000.000.000-00">
+    <label for="nota">Nota</label>
+    <input 
+        type="number" 
+        class="form-control mb-3" 
+        id="nota" 
+        placeholder="Insira a nota do aluno"
+        name="nota" 
+        formControlName="nota">
+    <button type="submit" class="btn btn-primary" [disabled]="alunoForm.invalid">Cadatrar aluno</button>
+</form>
+<button type="button" class="btn btn-secondary mt-3" routerLink="/labschool/alunos">Voltar</button>
