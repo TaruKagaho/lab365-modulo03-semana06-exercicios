@@ -19,6 +19,11 @@ const routes: Routes = [
     canActivateChild: [privadoChildGuard],
     children: [
       { 
+        path: '', 
+        redirectTo: '/labschool/inicio',
+        pathMatch: 'full'
+      },
+      { 
         path: 'inicio', 
         component: InicioComponent,
         // canActivate: [privadoGuard]

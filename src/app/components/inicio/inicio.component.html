@@ -1,6 +1,5 @@
 <h3 class="mt-3">Dashboard informativo</h3>
 <div class="mt-5">
-
   <div class="row">
     <div class="col-sm-3">
       <div class="card">
@@ -54,6 +53,25 @@
       </div>
     </div>
   </div>
-
-
 </div>
+
+<h5 class="mt-3">Próximos atendimentos</h5>
+<hr class="mb-1">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Data</th>
+      <th scope="col">Pedagogo</th>
+      <th scope="col">Aluno</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let acompanhamento of acompanhamentosProximos">
+      <td>{{ acompanhamento.data }}</td>
+      <td>{{ acompanhamento.pedagogo }}</td>
+      <td>{{ acompanhamento.aluno }}</td>
+    </tr>
+
+  </tbody>
+</table>
