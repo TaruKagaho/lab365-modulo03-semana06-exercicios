@@ -386,5 +386,63 @@
       "tipo_sanguineo": "A+",
       "cor": "vermelho"
     }
+  ],
+  "acompanhamentos": [
+    {
+      "titulo": "Acompanhamento de rotina",
+      "aluno": "Analu Luna Mendes",
+      "pedagogo": "Alvaro Jose",
+      "data": "03/08/2023",
+      "descricao": "Apenas um acompanhamento de rotina para ver como estão as coisas",
+      "finalizado": false
+    },
+    {
+      "titulo": "Auxílio de carreira",
+      "aluno": "Cauê Calebe Alexandre da Costa",
+      "pedagogo": "Alvaro Jose",
+      "data": "03/08/2023",
+      "descricao": "Acompanhamento visando auxílio e dicas para carreira profissional",
+      "finalizado": false
+    },
+    {
+      "titulo": "Problemas com transporte",
+      "aluno": "Otávio João Ricardo Brito",
+      "pedagogo": "Alvaro Jose",
+      "data": "01/08/2023",
+      "descricao": "Verificação de transporte do aluno até a escola",
+      "finalizado": true
+    },
+    {
+      "titulo": "Acompanhamento de rotina",
+      "aluno": "Noah Luiz Breno Pereira",
+      "pedagogo": "Alvaro Jose",
+      "data": "03/08/2023",
+      "descricao": "Apenas um acompanhamento de rotina para ver como estão as coisas",
+      "finalizado": false
+    },
+    {
+      "titulo": "Problema de saúde",
+      "aluno": "Marcos Vinicius Giovanni dos Santos",
+      "pedagogo": "Alvaro Jose",
+      "data": "05/08/2023",
+      "descricao": "Acompanhamento para verificar saúde do estudante",
+      "finalizado": false
+    },
+    {
+      "titulo": "Foco esportivo",
+      "aluno": "Alexandre João Pedro Henrique Santos",
+      "pedagogo": "Alvaro Jose",
+      "data": "31/07/2023",
+      "descricao": "Planejamento para jogos de verão deste ano",
+      "finalizado": true
+    },
+    {
+      "titulo": "Acompanhamento de rotina",
+      "aluno": "Alexandre João Pedro Henrique Santos",
+      "pedagogo": "Alvaro Jose",
+      "data": "10/08/2023",
+      "descricao": "Apenas um acompanhamento de rotina para ver como estão as coisas",
+      "finalizado": false
+    }
   ]
 }
