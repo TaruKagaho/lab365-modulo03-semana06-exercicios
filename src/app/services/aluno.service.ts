@@ -13,9 +13,8 @@ export class AlunoService {
   constructor(private httpClient: HttpClient) { }
 
   async obterAlunos() {
-    const alunosCompletos = await lastValueFrom(this.httpClient.get<IAluno[]>("http://localhost:3000/alunos"));
-    this.alunos = alunosCompletos.slice(0, 9);
-    return alunosCompletos.slice(0, 9);
+    this.alunos = await lastValueFrom(this.httpClient.get<IAluno[]>("http://localhost:3000/alunos"));
+    return this.alunos;
   }
 
   filtrarAlunos(filtro: string) {
@@ -29,5 +28,11 @@ export class AlunoService {
     }
 
     return alunosFiltrados;
+  }
+
+  async obterNumeroAlunos() {
+    if (this.alunos.length === 0)
+      await this.obterAlunos();
+    return this.alunos.length;
   }
 }

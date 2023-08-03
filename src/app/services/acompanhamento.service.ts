@@ -30,5 +30,18 @@ export class AcompanhamentoService {
     return acompanhamentosFiltrados;
   }
 
+  async obterNumeroAcompanhamentos() {
+    if (this.acompanhamentos.length === 0)
+      await this.obterAcompanhamentos();
+    return this.acompanhamentos.length;
+  }
+
+  async obterPorcentagemConcluidos() {
+    if (this.acompanhamentos.length === 0)
+      await this.obterAcompanhamentos();
+    const acompanhamentosConcluidos = this.acompanhamentos.filter(ac => ac.finalizado);
+    return Math.floor((acompanhamentosConcluidos.length / this.acompanhamentos.length) * 100);
+  }
+
 
 }
