@@ -12,6 +12,8 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { AlunosComponent } from './components/alunos/alunos.component';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
+import { NaoAutorizadoComponent } from './components/nao-autorizado/nao-autorizado.component';
+import { NaoEncontradoComponent } from './components/nao-encontrado/nao-encontrado.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component
     CadastroComponent,
     HeaderComponent,
     AlunosComponent,
-    BaseLayoutComponent
+    BaseLayoutComponent,
+    NaoAutorizadoComponent,
+    NaoEncontradoComponent
   ],
   imports: [
     BrowserModule,
