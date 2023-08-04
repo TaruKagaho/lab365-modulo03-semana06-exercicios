@@ -1,4 +1,5 @@
 export interface IAcompanhamento {
+    id?: number,
     titulo: string,
     aluno: string,
     pedagogo: string,

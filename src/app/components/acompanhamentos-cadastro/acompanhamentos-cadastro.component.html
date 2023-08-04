@@ -25,6 +25,7 @@
             {{ pedagogo.nome }}
         </option>
     </select>
+
     <label for="data">Data do acompanhamento</label>
     <input 
         type="date" 
@@ -33,7 +34,8 @@
         placeholder="dd/mm/aaaa"
         name="data" 
         formControlName="data">
-    <label for="descricao">Descrição do acompanhamento</label>
+    
+        <label for="descricao">Descrição do acompanhamento</label>
     <textarea 
         class="form-control mb-3" 
         id="descricao" 
@@ -47,6 +49,8 @@
         <label class="form-check-label" for="finalizado">Finalizado</label>
     </div>
 
-    <button type="submit" class="btn btn-primary" [disabled]="acompanhamentoForm.invalid">Cadatrar acompanhamento</button>
+    <button type="submit" class="btn btn-primary" [disabled]="acompanhamentoForm.invalid">
+        {{ acompanhamentoId ? 'Editar' : 'Cadastrar' }} acompanhamento
+    </button>
 </form>
 <button type="button" class="btn btn-secondary mt-3" routerLink="/labschool/acompanhamentos">Voltar</button>

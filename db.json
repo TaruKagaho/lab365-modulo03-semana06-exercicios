@@ -435,7 +435,7 @@
       "pedagogo": "Alvaro Jose",
       "data": "03/08/2023",
       "descricao": "Acompanhamento visando auxílio e dicas para carreira profissional",
-      "finalizado": false
+      "finalizado": true
     },
     {
       "id": 3,
@@ -492,13 +492,13 @@
       "id": 8
     },
     {
+      "id": 9,
       "titulo": "Acompanhamento para carreira profissional",
       "aluno": "Marcos Guilherme Teixeira",
       "pedagogo": "Alvaro Jose",
-      "data": "02/08/2023",
-      "descricao": "Reunião com pais sobre futuro profissional.",
-      "finalizado": true,
-      "id": 9
+      "data": "09/08/2023",
+      "descricao": "Reunião com pais sobre futuro profissional. Parece estar muito ansioso.",
+      "finalizado": false
     }
   ]
 }

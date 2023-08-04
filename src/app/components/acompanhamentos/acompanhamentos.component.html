@@ -32,7 +32,7 @@
             <i *ngIf="acompanhamento.finalizado" class="bi bi-check-square"></i>
             <i *ngIf="!acompanhamento.finalizado" class="bi bi-square"></i>
         </td>
-        <td><i class="bi bi-pencil-square"></i></td>
+        <td style="cursor: pointer;" (click)="editar(acompanhamento)"><i class="bi bi-pencil-square"></i></td>
       </tr>
 
     </tbody>

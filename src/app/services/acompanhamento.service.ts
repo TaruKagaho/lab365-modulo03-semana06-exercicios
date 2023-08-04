@@ -17,8 +17,16 @@ export class AcompanhamentoService {
     return this.acompanhamentos;
   }
 
+  obterAcompanhamentoPorId(id: number) {
+    return lastValueFrom(this.httpClient.get<IAcompanhamento>("http://localhost:3000/acompanhamentos/" + id));
+  }
+
   cadastrarAcompanhamento(acompanhamento: IAcompanhamento) {
     return lastValueFrom(this.httpClient.post("http://localhost:3000/acompanhamentos", acompanhamento));
+  }
+
+  atualizarAcompanhamento(acompanhamento: IAcompanhamento) {
+    return lastValueFrom(this.httpClient.put("http://localhost:3000/acompanhamentos/" + acompanhamento.id, acompanhamento));
   }
 
   filtrarAcompanhamentos(filtro: string) {
