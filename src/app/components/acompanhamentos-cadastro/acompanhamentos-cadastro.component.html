@@ -1,0 +1,52 @@
+<h3><strong>Cadastrar acompanhamento pedagógico</strong></h3>
+
+
+<form class="w-50" [formGroup]="acompanhamentoForm" (ngSubmit)="onSubmit()">
+    <label for="titulo">Titulo do acompanhamento</label>
+    <input 
+        type="text" 
+        class="form-control mb-3" 
+        id="titulo" 
+        placeholder="Insira o titulo" 
+        name="titulo" 
+        formControlName="titulo">
+    <label for="aluno">Aluno</label>
+    <select class="form-control mb-3" id="aluno" name="aluno" formControlName="aluno">
+        <option selected disabled></option>
+        <option *ngFor="let aluno of alunos">
+            {{ aluno.nome }}
+        </option>
+    </select>
+
+    <label for="pedagogo">Pedagogo</label>
+    <select class="form-control mb-3" id="pedagogo" name="pedagogo" formControlName="pedagogo">
+        <option selected disabled></option>
+        <option *ngFor="let pedagogo of pedagogos">
+            {{ pedagogo.nome }}
+        </option>
+    </select>
+    <label for="data">Data do acompanhamento</label>
+    <input 
+        type="date" 
+        class="form-control mb-3" 
+        id="data" 
+        placeholder="dd/mm/aaaa"
+        name="data" 
+        formControlName="data">
+    <label for="descricao">Descrição do acompanhamento</label>
+    <textarea 
+        class="form-control mb-3" 
+        id="descricao" 
+        rows="3"
+        placeholder="Insira a descrição do acompanhamento"
+        nome="descricao"
+        formControlName="descricao"></textarea>
+    
+    <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="finalizado" name="finalizado" formControlName="finalizado">
+        <label class="form-check-label" for="finalizado">Finalizado</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="acompanhamentoForm.invalid">Cadatrar acompanhamento</button>
+</form>
+<button type="button" class="btn btn-secondary mt-3" routerLink="/labschool/acompanhamentos">Voltar</button>

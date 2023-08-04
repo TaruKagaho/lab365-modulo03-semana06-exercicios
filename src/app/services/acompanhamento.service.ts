@@ -17,6 +17,10 @@ export class AcompanhamentoService {
     return this.acompanhamentos;
   }
 
+  cadastrarAcompanhamento(acompanhamento: IAcompanhamento) {
+    return lastValueFrom(this.httpClient.post("http://localhost:3000/acompanhamentos", acompanhamento));
+  }
+
   filtrarAcompanhamentos(filtro: string) {
     let acompanhamentosFiltrados: IAcompanhamento[] = [];
     const filtroMinusculo = filtro.toLocaleLowerCase();
@@ -58,7 +62,7 @@ export class AcompanhamentoService {
     return acompanhamentos;
   }
 
-  private _formatarData(dataOriginal: Date) {
+  private _formatarData(dataOriginal: string) {
     const dateString = dataOriginal.toString();
     const dateParts = dateString.split("/");
     const dateObject = new Date(+dateParts[2], +dateParts[1] - 1, +dateParts[0]);

@@ -2,7 +2,7 @@ export interface IAcompanhamento {
     titulo: string,
     aluno: string,
     pedagogo: string,
-    data: Date,
+    data: string,
     descricao: string,
     finalizado: boolean
 }

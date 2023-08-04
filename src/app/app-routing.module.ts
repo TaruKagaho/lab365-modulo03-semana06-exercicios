@@ -11,6 +11,7 @@ import { NaoEncontradoComponent } from './components/nao-encontrado/nao-encontra
 import { AcompanhamentosComponent } from './components/acompanhamentos/acompanhamentos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AlunosCadastroComponent } from './components/alunos-cadastro/alunos-cadastro.component';
+import { AcompanhamentosCadastroComponent } from './components/acompanhamentos-cadastro/acompanhamentos-cadastro.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -42,6 +43,11 @@ const routes: Routes = [
       { 
         path: 'acompanhamentos', 
         component: AcompanhamentosComponent,
+        // canActivate: [privadoGuard]
+      },
+      { 
+        path: 'acompanhamentos-cadastro', 
+        component: AcompanhamentosCadastroComponent,
         // canActivate: [privadoGuard]
       }
     ]
