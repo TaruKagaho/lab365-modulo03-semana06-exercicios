@@ -7,7 +7,7 @@
     placeholder="Título do acompanhamento" 
     (input)="onInputChange()">
 
-    <button class="btn btn-primary">Cadastrar acompanhamento</button>
+    <button class="btn btn-primary" routerLink="/labschool/acompanhamentos-cadastro">Cadastrar acompanhamento</button>
 </div>
 <hr class="mb-1">
 <table class="table">
@@ -32,7 +32,7 @@
             <i *ngIf="acompanhamento.finalizado" class="bi bi-check-square"></i>
             <i *ngIf="!acompanhamento.finalizado" class="bi bi-square"></i>
         </td>
-        <td><i class="bi bi-pencil-square"></i></td>
+        <td style="cursor: pointer;" (click)="editar(acompanhamento)"><i class="bi bi-pencil-square"></i></td>
       </tr>
 
     </tbody>
