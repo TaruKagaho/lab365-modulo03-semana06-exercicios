@@ -1,0 +1,77 @@
+<h3 class="mt-3">Dashboard informativo</h3>
+<div class="mt-5">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          <strong>Alunos cadastrados</strong>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            O sistema conta com <strong><u>{{alunosCadastrados}}</u></strong> alunos cadastrados.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          <strong>Pedagogos cadastrados</strong>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            O sistema conta com <strong><u>{{pedagogosCadastrados}}</u></strong> pedagogos cadastrados.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          <strong>Atendimentos pedagógicos</strong>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            O sistema conta com <strong><u>{{atendimentosPedagogicos}}</u></strong> atendimentos pedagógicos (abertos e concluídos somados).
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          <strong>Atendimentos concluídos</strong>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            O sistema calcula que <strong><u>{{atendimentosConcluidos}}%</u></strong> dos atendimentos pedagógicos já foram concluídos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="mt-3">Próximos atendimentos</h5>
+<hr class="mb-1">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Data</th>
+      <th scope="col">Pedagogo</th>
+      <th scope="col">Aluno</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let acompanhamento of acompanhamentosProximos">
+      <td>{{ acompanhamento.data }}</td>
+      <td>{{ acompanhamento.pedagogo }}</td>
+      <td>{{ acompanhamento.aluno }}</td>
+    </tr>
+
+  </tbody>
+</table>

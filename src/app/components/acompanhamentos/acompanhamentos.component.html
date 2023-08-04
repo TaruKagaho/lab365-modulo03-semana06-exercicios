@@ -1,0 +1,39 @@
+<h3><strong>Acompanhamentos pedagógicos</strong></h3>
+<div class="d-flex flex-row justify-content-between">
+  <input 
+    id="filtroAcompanhamento" 
+    class="form-control w-25" 
+    type="text" 
+    placeholder="Título do acompanhamento" 
+    (input)="onInputChange()">
+
+    <button class="btn btn-primary" routerLink="/labschool/acompanhamentos-cadastro">Cadastrar acompanhamento</button>
+</div>
+<hr class="mb-1">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Titulo</th>
+        <th scope="col">Aluno</th>
+        <th scope="col">Pedagogo</th>
+        <th scope="col">Data</th>
+        <th scope="col">Finalizado</th>
+        <th scope="col">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let acompanhamento of acompanhamentos">
+        <td>{{ acompanhamento.titulo }}</td>
+        <td>{{ acompanhamento.aluno }}</td>
+        <td>{{ acompanhamento.pedagogo }}</td>
+        <td>{{ acompanhamento.data }}</td>
+        <td>
+            <i *ngIf="acompanhamento.finalizado" class="bi bi-check-square"></i>
+            <i *ngIf="!acompanhamento.finalizado" class="bi bi-square"></i>
+        </td>
+        <td style="cursor: pointer;" (click)="editar(acompanhamento)"><i class="bi bi-pencil-square"></i></td>
+      </tr>
+
+    </tbody>
+  </table>
