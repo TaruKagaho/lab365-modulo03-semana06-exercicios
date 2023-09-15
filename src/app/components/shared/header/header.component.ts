@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { AuthService } from 'src/app/services/auth.service';
 
-@Component({
+@Component( {
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
-})
+  styleUrls: [ './header.component.css' ]
+} )
 export class HeaderComponent implements OnInit {
 
   nomeUsuario: string | undefined = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.nomeUsuario = this.authService.obterNomePedagogoLogado();
@@ -19,7 +23,7 @@ export class HeaderComponent implements OnInit {
 
   sair() {
     this.authService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate( [ '/login' ] );
   }
 
 }
